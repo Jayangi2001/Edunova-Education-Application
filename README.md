@@ -52,25 +52,7 @@ The application architecture is backed by a local/mock data layer supporting com
 
 ---
 
-## 📁 Project Directory Structure
-
-```text
-EduNova/
-│
-├── app/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/com/example/myapplication/   <- Kotlin Source Files
-│   │       └── res/layout/                       <- XML Layout Architecture
-│   └── build.gradle.kts
-│
-├── screenshots/                                  <- Application UI Wireframes
-│
-└── README.md                                     <- Project Landing Documentation
-
-
-## 👥Team Contribution
-
+## 👥 Team Contribution
 
 ITBIN-2313-0020 S.M.K.S. De Silva  
 *Figma Designs : Quiz section, Module enrollment, Payment system  
@@ -103,3 +85,21 @@ ITBIN-2313-0135 M. Imashi Shashikala
 *Figma Designs : Bookmark section  
 *CRUD Implementation : Create bookmark, read bookmark, Update bookmark, Delete bookmark  
 *Documentation
+
+
+## 📁 Project Directory Structure
+
+```text
+EduNova/
+│
+├── app/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/com/example/myapplication/   <- Kotlin Source Files
+│   │       └── res/layout/                       <- XML Layout Architecture
+│   └── build.gradle.kts
+│
+├── screenshots/                                  <- Application UI Wireframes
+│
+└── README.md                                     <- Project Landing Documentation
+
