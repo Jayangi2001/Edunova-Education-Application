@@ -67,3 +67,39 @@ EduNova/
 ├── screenshots/                                  <- Application UI Wireframes
 │
 └── README.md                                     <- Project Landing Documentation
+
+
+## 👥Team Contribution
+
+
+ITBIN-2313-0020 S.M.K.S. De Silva  
+*Figma Designs : Quiz section, Module enrollment, Payment system  
+*CRUD Implementation : Create quiz, read quiz, Update or add questions, Delete quiz  
+*Application Development & UI Integration  
+*Syntax & Structural Fixes  
+*Runtime Error Troubleshooting  
+*Documentation  
+
+<br>
+
+ITBIN-2313-0030 D.M.D. Dilshara Dissanayake  
+*Figma Designs : Lesson Management , Saved lessons  
+*CRUD Implementation : Create Lesson, read Lesson, Update Lesson, Delete Lesson  
+*Documentation  
+
+<br>
+
+ITBIN-2313-0125 H.C Jayangi Wickramarathna  
+*Figma Design : Student Registration, course/Module overview, student Dash board  
+*CRUD implementation : Create profile, read profile, Update profile, Delete profile  
+*Figma Prototype Validation  
+*Software Testing & Quality Assurance  
+*Runtime Error Troubleshooting  
+*Documentation  
+
+<br>
+
+ITBIN-2313-0135 M. Imashi Shashikala  
+*Figma Designs : Bookmark section  
+*CRUD Implementation : Create bookmark, read bookmark, Update bookmark, Delete bookmark  
+*Documentation
