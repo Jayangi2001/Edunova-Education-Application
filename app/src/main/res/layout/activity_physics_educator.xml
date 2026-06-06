@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/headerEducator"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackEducator"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottomJoinBar"
+        app:layout_constraintTop_toBottomOf="@id/headerEducator">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="“Learn physics, understand the world.”"
+                android:textColor="#F39C12"
+                android:textSize="16sp"
+                android:textStyle="italic|bold"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivEducatorBigPic"
+                android:layout_width="120dp"
+                android:layout_height="123dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_15"
+                app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mr. Sarath Kariyawasam"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="start"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BSc. (Hons) in Physical Science - University of Colombo"
+                android:textColor="#7F8C8D"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:gravity="start"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Mr. Kariyawasam is a passionate Physics teacher with over 10 years of teaching experience, specializing in GCE A/L Physics. He expertly covers all key areas, including Mechanics, Electricity &amp; Magnetism, Thermal Physics, Waves, Modern Physics, and Practical Experiments. Known for breaking down complex concepts into easy-to-understand lessons, he inspires curiosity, , and helps students achieve excellent results in both theory and practical exams."
+                android:textColor="#2C3E50"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="start"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="From this platform to you,"
+                android:textColor="@color/blue_primary"
+                android:textSize="14sp"
+                android:textStyle="italic|bold"
+                android:gravity="start"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_back_arrow" android:rotation="180" app:tint="@color/blue_primary"
+                        tools:ignore="ContentDescription" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cover all the theory parts 2months before the exam." android:textSize="12sp" android:textColor="#2C3E50" android:layout_marginStart="8dp" android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_back_arrow" android:rotation="180" app:tint="@color/blue_primary"
+                        tools:ignore="ContentDescription" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cover all the practical parts." android:textSize="12sp" android:textColor="#2C3E50" android:layout_marginStart="8dp" android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_back_arrow" android:rotation="180" app:tint="@color/blue_primary"
+                        tools:ignore="ContentDescription" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10 full structured exam papers." android:textSize="12sp" android:textColor="#2C3E50" android:layout_marginStart="8dp" android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A paper will be conducted every month."
+                    android:textSize="12sp"
+                    android:textColor="#2C3E50"
+                    android:layout_marginStart="24dp"
+                    android:textStyle="italic"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomJoinBar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvMonthlyFeeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Fee- Rs.6500"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnJoinWithUsBig"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#F39C12"
+            android:text="Join with us"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="25dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

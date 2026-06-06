@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/headerPayment"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/ivBackPayment"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back_arrow"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Checkout"
+            android:textColor="@color/blue_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/btnPayFinal"
+        app:layout_constraintTop_toBottomOf="@id/headerPayment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_field"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary"
+                    android:textColor="#7F8C8D"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Physics - June Month Class"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount: Rs. 6500.00"
+                    android:textColor="@color/blue_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Payment Method"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:id="@+id/btnOptionCard"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/gray_field"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivCardIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_compass"
+                    android:layout_centerVertical="true"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/ivCardIcon"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Credit / Debit Card" android:textStyle="bold" android:textColor="#2C3E50"
+                        tools:ignore="HardcodedText" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Visa, MasterCard, Amex" android:textSize="11sp" android:textColor="#7F8C8D"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rbCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCardDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gray_field"
+                android:padding="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/card_number" android:textSize="12sp" android:textStyle="bold" android:textColor="#2C3E50"/>
+                <EditText
+                    android:id="@+id/etCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#FFFFFF"
+                    android:hint="@string/_1234_5678_9876_5432"
+                    android:importantForAutofill="no"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:maxLength="19"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/expiry_date" android:textSize="12sp" android:textStyle="bold" android:textColor="#2C3E50"/>
+                        <EditText
+                            android:id="@+id/etCardExpiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="#FFFFFF"
+                            android:hint="@string/mm_yy"
+                            android:importantForAutofill="no"
+                            android:paddingHorizontal="12dp"
+                            android:textSize="14sp"
+                            android:inputType="date"
+                            android:maxLength="5"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cvv" android:textSize="12sp" android:textStyle="bold" android:textColor="#2C3E50"/>
+                        <EditText
+                            android:id="@+id/etCardCVV"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="#FFFFFF"
+                            android:hint="@string/_123"
+                            android:importantForAutofill="no"
+                            android:paddingHorizontal="12dp"
+                            android:textSize="14sp"
+                            android:inputType="numberPassword"
+                            android:maxLength="3"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnOptionBank"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/gray_field"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivBankIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:layout_centerVertical="true"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/ivBankIcon"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true"
+                    tools:ignore="RelativeOverlap">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bank_deposit_transfer" android:textStyle="bold" android:textColor="#2C3E50"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upload bank slip or receipt image" android:textSize="11sp" android:textColor="#7F8C8D"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rbBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:checked="false"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBankDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gray_field"
+                android:padding="16dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bank_boc_bank_of_ceylon" android:textStyle="bold" android:textColor="#000000"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/acc_name_lms_pvt_ltd" android:textColor="#2C3E50" android:layout_marginTop="2dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/acc_no_87443921" android:textStyle="bold" android:textColor="@color/blue_primary" android:layout_marginTop="2dp"/>
+
+                <Button
+                    android:id="@+id/btnUploadSlip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#7F8C8D"
+                    android:text="@string/upload_receipt_image"
+                    android:textSize="11sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnPayFinal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:backgroundTint="#F39C12"
+        android:text="Secure Pay Rs. 6500"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

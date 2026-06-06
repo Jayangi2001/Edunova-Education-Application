@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
+
+    <RelativeLayout
+        android:id="@+id/headerSavedBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/ivBackSavedBookmarks"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#2C3E50"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Saved Bookmarks"
+            android:textColor="#2C3E50"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTabsBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintTop_toBottomOf="@id/headerSavedBookmarks">
+
+        <Button
+            android:id="@+id/btnTabLessons"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Saved Lessons (3)"
+            android:textColor="#F39C12"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnTabQuestions"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Saved Quizzes (2)"
+            android:textColor="#7F8C8D"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTabsBookmarks">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background_normal"
+                android:backgroundTint="#FFFFFF"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:id="@+id/tag1"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="#3498DB"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSavedTitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="01. Introduction to Mechanics"
+                    android:textColor="#1B3A4B"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark1"
+                    app:layout_constraintStart_toEndOf="@id/tag1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Note: Revise Newton's 3rd law before exam."
+                    android:textColor="#E67E22"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark1"
+                    app:layout_constraintStart_toEndOf="@id/tag1"
+                    app:layout_constraintTop_toBottomOf="@id/tvSavedTitle1" />
+
+                <ImageButton
+                    android:id="@+id/btnEditBookmark1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="#2980B9"
+                    android:contentDescription="Edit Bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteBookmark1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteBookmark1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/btn_star_big_on"
+                    android:contentDescription="Edit Bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background_normal"
+                android:backgroundTint="#FFFFFF"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:id="@+id/tag2"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="#E67E22"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSavedTitle2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="02. Waves and Oscillations"
+                    android:textColor="#1B3A4B"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark2"
+                    app:layout_constraintStart_toEndOf="@id/tag2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Note: Doppler effect formulas are hard."
+                    android:textColor="#E67E22"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark2"
+                    app:layout_constraintStart_toEndOf="@id/tag2"
+                    app:layout_constraintTop_toBottomOf="@id/tvSavedTitle2" />
+
+                <ImageButton
+                    android:id="@+id/btnEditBookmark2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="#2980B9"
+                    android:contentDescription="Edit Bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteBookmark2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteBookmark2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Edit Bookmark"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background_normal"
+                android:backgroundTint="#FFFFFF"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:id="@+id/tag3"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="#2ECC71"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSavedTitle3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="03. Thermal Physics - Tutorial 01"
+                    android:textColor="#1B3A4B"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark3"
+                    app:layout_constraintStart_toEndOf="@id/tag3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Note: Check ideal gas equations again."
+                    android:textColor="#E67E22"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark3"
+                    app:layout_constraintStart_toEndOf="@id/tag3"
+                    app:layout_constraintTop_toBottomOf="@id/tvSavedTitle3" />
+
+                <ImageButton
+                    android:id="@+id/btnEditBookmark3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="#2980B9"
+                    android:contentDescription="Edit Bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteBookmark3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteBookmark3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Edit Bookmark"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background_normal"
+                android:backgroundTint="#FFFFFF"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:id="@+id/tag4"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="#9B59B6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSavedTitle4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Quiz 01: Kinematics MCQs"
+                    android:textColor="#1B3A4B"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark4"
+                    app:layout_constraintStart_toEndOf="@id/tag4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Note: Got 3 wrong answers. Retry later."
+                    android:textColor="#E67E22"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark4"
+                    app:layout_constraintStart_toEndOf="@id/tag4"
+                    app:layout_constraintTop_toBottomOf="@id/tvSavedTitle4" />
+
+                <ImageButton
+                    android:id="@+id/btnEditBookmark4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="#2980B9"
+                    android:contentDescription="Edit Bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteBookmark4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteBookmark4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Edit Bookmark"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background_normal"
+                android:backgroundTint="#FFFFFF"
+                android:padding="14dp"
+                android:layout_marginBottom="24dp">
+
+                <View
+                    android:id="@+id/tag5"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="#E74C3C"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvSavedTitle5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Quiz 04: Refraction &amp; Lenses"
+                    android:textColor="#1B3A4B"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark5"
+                    app:layout_constraintStart_toEndOf="@id/tag5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Note: Lens maker's formula questions included."
+                    android:textColor="#E67E22"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@+id/btnEditBookmark5"
+                    app:layout_constraintStart_toEndOf="@id/tag5"
+                    app:layout_constraintTop_toBottomOf="@id/tvSavedTitle5" />
+
+                <ImageButton
+                    android:id="@+id/btnEditBookmark5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:tint="#2980B9"
+                    android:contentDescription="Edit Bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteBookmark5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteBookmark5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Edit Bookmark"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

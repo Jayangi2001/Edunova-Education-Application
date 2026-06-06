@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
+
+    <ImageView
+        android:id="@+id/ivQuestionsBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvQuestionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mechanics Quiz - 02"
+        android:textColor="@color/blue_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivQuestionsBack"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="All 05 Questions"
+        android:textColor="#7F8C8D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestionsTitle"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/quizProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:max="5"
+        android:progress="5"
+        android:progressTint="@color/blue_primary"
+        app:layout_constraintTop_toBottomOf="@id/tvProgressText" />
+
+    <ScrollView
+        android:id="@+id/quizScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/llBottomButtons"
+        app:layout_constraintTop_toBottomOf="@id/quizProgressBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvQuestionText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="01. What is the SI unit of force?"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOptions1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOptionA1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="A) Joule (J)"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionB1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="B) Newton (N)"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionC1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="C) Watt (W)"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionD1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="D) Pascal (Pa)"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvQuestionText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="02. What is the acceleration due to gravity on Earth?"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOptions2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOptionA2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="A) 9.8 m/s²"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionB2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="B) 5.6 m/s²"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionC2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="C) 12.0 m/s²"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionD2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="D) 1.6 m/s²"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvQuestionText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="03. Which Newton's law states that 'For every action, there is an equal and opposite reaction'?"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOptions3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOptionA3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="A) First Law"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionB3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="B) Second Law"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionC3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="C) Third Law"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionD3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="D) Law of Gravitation"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvQuestionText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="04. What type of energy is stored in a compressed spring?"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOptions4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOptionA4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="A) Kinetic Energy"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionB4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="B) Elastic Potential Energy"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionC4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="C) Thermal Energy"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionD4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="D) Chemical Energy"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvQuestionText5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="05. Momentum is the product of which two quantities?"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOptions5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOptionA5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="A) Mass and Velocity"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionB5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="B) Force and Distance"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionC5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="C) Mass and Acceleration"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rbOptionD5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_field"
+                            android:padding="12dp"
+                            android:button="@null"
+                            android:text="D) Work and Time"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="#F4F6F9"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#BDC3C7"
+            android:text="Top"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/btnNextSubmit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/blue_primary"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

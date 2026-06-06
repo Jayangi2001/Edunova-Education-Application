@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/ivProfileBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Go Back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvMyProfileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.02"
+        android:text="@string/my_profile"
+        android:textColor="@color/blue_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfileBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivProfileBack"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ivCloseProfile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/img_11"
+        android:contentDescription="Close Profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivProfileBack" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMyProfileHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_field"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="6dp"
+                android:padding="16dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginVertical="4dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivDashProfilePic"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                <LinearLayout
+                    android:id="@+id/nameContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnEditProfile"
+                    app:layout_constraintStart_toEndOf="@id/ivDashProfilePic"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvDashUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tharushi_perera"
+                        android:textColor="#1E293B"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDashUserEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/tharushi_gmail_com"
+                        android:textColor="#64748B"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@color/blue_primary"
+                    android:paddingHorizontal="14dp"
+                    android:text="@string/edit_profile"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/menuMyLessons"
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#3498DB" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Lessons Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="My Lessons" tools:ignore="HardcodedText" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuMyQuiz"
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#E67E22" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Quiz Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/my_quiz" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuGrades"
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#2ECC71" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Grades Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/grades" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuMyBookmarks"
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#9B59B6" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Bookmarks Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="My Bookmarks" tools:ignore="HardcodedText" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#F1C40F" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Teachers Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/my_teachers" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#1ABC9C" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Downloads Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/downloads" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#7F8C8D" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Language Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/language" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#34495E" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Payment Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/payment_history" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Open Section" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuLogOut"
+                    style="@style/ProfileMenuRow"
+                    android:layout_marginBottom="24dp"
+                    android:paddingStart="0dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="#E74C3C" />
+
+                    <ImageView style="@style/ProfileMenuIcon" android:layout_marginStart="12dp" android:contentDescription="Log Out Icon" />
+                    <TextView style="@style/ProfileMenuText" android:text="@string/log_out" android:textColor="#E74C3C" android:textStyle="bold" />
+                    <ImageView style="@style/ProfileMenuArrow" android:src="@drawable/ic_arrow" android:contentDescription="Log Out" app:tint="#E74C3C" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:src="@drawable/img"
+                android:layout_gravity="center"
+                android:alpha="0.15"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="App Logo Watermark" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

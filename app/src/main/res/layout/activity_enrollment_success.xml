@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:id="@+id/layoutSuccessHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="24dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/success"
+            android:src="@android:drawable/checkbox_on_background"
+            app:tint="#2ECC71" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Payment Successful!"
+            android:textColor="#2C3E50"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Your enrollment is now complete."
+            android:textColor="#7F8C8D"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray_field"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutSuccessHeader">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Summary"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Course" android:textColor="#7F8C8D" android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Physics - Grade 12" android:textColor="#000000" android:textStyle="bold" android:textSize="13sp" android:layout_alignParentEnd="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lecturer" android:textColor="#7F8C8D" android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mr. Sarath Kariyawasam" android:textColor="#000000" android:textSize="13sp" android:layout_alignParentEnd="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Batch Month" android:textColor="#7F8C8D" android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="June" android:textColor="#000000" android:textSize="13sp" android:layout_alignParentEnd="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Status" android:textColor="#7F8C8D" android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PAID 🎉" android:textColor="#2ECC71" android:textStyle="bold" android:textSize="13sp" android:layout_alignParentEnd="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDC3C7"
+            android:layout_marginVertical="12dp"/>
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/total_paid" android:textColor="#000000" android:textStyle="bold" android:textSize="14sp"
+                tools:ignore="RelativeOverlap" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 6500.00" android:textColor="@color/blue_primary" android:textStyle="bold" android:textSize="16sp" android:layout_alignParentEnd="true"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGoToClassroom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#F39C12"
+        android:text="@string/go_to_classroom"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivQuizBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivQuizProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_4"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuizTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/my_quizzes"
+        android:textColor="@color/blue_primary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivQuizBack" />
+
+    <TextView
+        android:id="@+id/tvQuizSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grade_12"
+        android:textColor="#7F8C8D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuizTitle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuizSubtitle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTopic1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Mechanics (Motion &amp; Forces)"
+                        android:textColor="#2C3E50"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivTopicImg1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_below="@id/tvTopic1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_7"
+                        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                    <LinearLayout
+                        android:id="@+id/rowQuiz1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTopic1"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnMechQuiz01"
+                            android:layout_width="75dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="#E8F8F5"
+                            android:padding="0dp"
+                            android:text="Quiz 01"
+                            android:textColor="#2ECC71"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#2ECC71"
+                            app:strokeWidth="1dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvMechViewGrade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="View Grade"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:id="@+id/ivMechDelete1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="Delete"
+                            android:src="@android:drawable/ic_menu_delete"
+                            app:tint="#E74C3C"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowQuiz1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rowQuiz1_1"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnMechQuiz02"
+                            android:layout_width="75dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="#FDEDEC"
+                            android:padding="0dp"
+                            android:text="Quiz 02"
+                            android:textColor="#E74C3C"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#E74C3C"
+                            app:strokeWidth="1dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvMechAttempt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Attempt Quiz"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:id="@+id/ivMechDelete2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="Delete"
+                            android:src="@android:drawable/ic_menu_delete"
+                            app:tint="#E74C3C"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnMechAddNew"
+                        android:layout_width="80dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ivTopicImg1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F1C40F"
+                        android:padding="0dp"
+                        android:text="@string/add_new"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp"
+                        tools:ignore="SmallSp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTopic2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. Waves and Sound"
+                        android:textColor="#2C3E50"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivTopicImg2"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_below="@id/tvTopic2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_8"
+                        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                    <LinearLayout
+                        android:id="@+id/rowQuiz2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTopic2"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="75dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="#E8F8F5"
+                            android:padding="0dp"
+                            android:text="Quiz 01"
+                            android:textColor="#2ECC71"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#2ECC71"
+                            app:strokeWidth="1dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvWavesViewGrade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="View Grade"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="Delete"
+                            android:src="@android:drawable/ic_menu_delete"
+                            app:tint="#E74C3C"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowQuiz2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rowQuiz2_1"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="75dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="#FDEDEC"
+                            android:padding="0dp"
+                            android:text="Quiz 02"
+                            android:textColor="#E74C3C"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#E74C3C"
+                            app:strokeWidth="1dp"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="12dp"
+                            android:contentDescription="Premium"
+                            android:src="@android:drawable/btn_star_big_on"
+                            app:tint="#F1C40F"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/btnWavesGet"
+                            android:layout_width="60dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="6dp"
+                            android:backgroundTint="#F1C40F"
+                            android:padding="0dp"
+                            android:text="Get"
+                            android:textColor="#000000"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="12dp"
+                            tools:ignore="HardcodedText,SmallSp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ivTopicImg2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F1C40F"
+                        android:padding="0dp"
+                        android:text="Add New"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTopic3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3. Atomic Structure"
+                        android:textColor="#2C3E50"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivTopicImg3"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_below="@id/tvTopic3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_9"
+                        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                    <LinearLayout
+                        android:id="@+id/rowQuiz3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTopic3"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="75dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="#FDEDEC"
+                            android:padding="0dp"
+                            android:text="Quiz 01"
+                            android:textColor="#E74C3C"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#E74C3C"
+                            app:strokeWidth="1dp"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="12dp"
+                            android:contentDescription="Premium"
+                            android:src="@android:drawable/btn_star_big_on"
+                            app:tint="#F1C40F"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/btnAtomicGet"
+                            android:layout_width="60dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="6dp"
+                            android:backgroundTint="#F1C40F"
+                            android:padding="0dp"
+                            android:text="Get"
+                            android:textColor="#000000"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="12dp"
+                            tools:ignore="HardcodedText,SmallSp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/ivTopicImg3"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F1C40F"
+                        android:padding="0dp"
+                        android:text="Add New"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

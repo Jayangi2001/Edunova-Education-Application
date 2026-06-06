@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
+
+    <RelativeLayout
+        android:id="@+id/headerCreate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/ivBackCreate"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back_arrow"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add New Lesson"
+            android:textColor="#2C3E50"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerCreate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lesson Title"
+                android:textColor="#34495E"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etLessonTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="e.g., 04. Light and Radiation"
+                android:inputType="textCapWords"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="#34495E"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etLessonDesc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Enter a brief summary of the lesson topics..."
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:padding="16dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attachment (PDF / Notes)"
+                android:textColor="#34495E"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/layoutUploadFile"
+                android:layout_width="wrap_content"
+                android:layout_height="168dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:backgroundTint="#EAEDED"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="Upload File"
+                    android:src="@android:drawable/ic_menu_upload"
+                    app:tint="#7F8C8D"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvSelectedFileName"
+                    android:layout_width="341dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Tap to select a document or resource"
+                    android:textColor="#7F8C8D"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveLesson"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#F39C12"
+                android:text="Save Lesson"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

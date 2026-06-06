@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivCoursesBack"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="@string/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/ivCoursesBell"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_notify"
+        android:contentDescription="@string/btn_back"
+        app:layout_constraintBottom_toBottomOf="@id/ivCoursesBack"
+        app:layout_constraintEnd_toStartOf="@id/ivCoursesProfilePic"
+        app:layout_constraintTop_toTopOf="@id/ivCoursesBack" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCoursesProfilePic"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_4"
+        app:layout_constraintBottom_toBottomOf="@id/ivCoursesBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCoursesBack"
+        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+    <TextView
+        android:id="@+id/tvWelcomeBackTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/welcome_back_tharushi"
+        android:textColor="@color/blue_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCoursesBack" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutCourses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextColor="#7F8C8D"
+        app:tabSelectedTextColor="@color/blue_primary"
+        app:tabIndicatorColor="@color/blue_primary"
+        app:tabTextAppearance="@android:style/TextAppearance.Small"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeBackTitle" />
+
+    <TextView
+        android:id="@+id/tvMyCoursesSubHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="My Courses"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayoutCourses"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvCourseOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course overview"
+        android:textColor="#7F8C8D"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMyCoursesSubHeader"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/etSearchMyCourses"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/gray_field"
+        android:hint="Search"
+        android:paddingHorizontal="16dp"
+        android:textSize="14sp"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvCourseOverview"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSearchMyCourses">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/cardBiology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/gray_field"
+                android:orientation="vertical"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:importantForAccessibility="no"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_12" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mrs_shriyani_gunawardhane"
+                        android:textColor="#2C3E50"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"
+                        tools:ignore="RelativeOverlap" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow"
+                        android:contentDescription="@string/btn_back"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardChemistry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/gray_field"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_13"
+                    tools:ignore="ContentDescription" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mr. Vimal Palliyaguru"
+                        android:textColor="#2C3E50"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"
+                        tools:ignore="HardcodedText" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow"
+                        android:contentDescription="@string/btn_back"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardPhysics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/gray_field"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_14"
+                    tools:ignore="ContentDescription" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mr_sarath_kariyawasam"
+                        android:textColor="#2C3E50"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"
+                        tools:ignore="RelativeOverlap" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow"
+                        android:contentDescription="@string/btn_back"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
