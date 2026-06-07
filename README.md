@@ -10,7 +10,7 @@ The application architecture relies heavily on clean UI components, dynamic data
 
 * **Development Language:** Kotlin (100%)  
 * **UI Layout Engine:** XML (ConstraintLayout, MaterialCardView, RecyclerView, Custom ScrollViews)  
-* **Minimum SDK Support:** Android API 24 (Nougat) or higher  
+* **Minimum SDK Support:** Android API 24 or higher  
 * **Development IDE:** Android Studio  
 * **Core Concepts Used:** View Binding, WindowInsetsCompat (Edge-to-Edge), Structural Layout Inflation  
 
@@ -45,10 +45,10 @@ The application supports financial transactions via a simulated Payment Gateway 
 
 The application architecture is backed by a local/mock data layer supporting complete CRUD (Create, Read, Update, Delete) capability:
 
-* **Create:** Allows users to submit new quiz records, log performance inputs, and initiate file upload requests.  
+* **Create:** Allows users can create their account, instructots can create the quizes and lessons, Students van create their own bookmarks. 
 * **Read:** Dynamically fetches and binds active subject datasets to render individual row-items inside custom list view adapters.  
-* **Update:** Updates individual grade metrics, modifies overall progress percentages, and toggles selection states in real-time.  
-* **Delete:** Supports the clean flushing of previous quiz states, clearing user selections when transitioning or safely terminating active screen instances.  
+* **Update:** Students can update their profile, lesson / quiz / bookmark updates or add new one. 
+* **Delete:** Delete outdated or no longer accssesible student accounts, quizes, lessons and bookmarks.  
 
 ---
 
